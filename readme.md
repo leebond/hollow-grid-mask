@@ -35,6 +35,7 @@ masked_image = getHollowGridMask(image)
 ```
 
 ## Arguments
+```
 Parameters
     ----------
     tessel : str, optional
@@ -53,7 +54,7 @@ Parameters
         Lower greyscale tone of the grid mask. The default is 0.
     v_h : int, optional
         Upper greyscale tone of the grid mask. The default is 255.
-
+```
     Returns
     -------
     3D numpy array
