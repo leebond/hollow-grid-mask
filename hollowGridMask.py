@@ -6,7 +6,33 @@ Created on Tue Jun 30 19:29:49 2020
 """
 import numpy as np
 
-def getHollowGridMask(tessel = 'odd', p=0.5, tessel_p = 0.5, hollow = True, s_l=0.01, s_h=0.05, r_1=0.3, r_2=1/0.3, v_l=0, v_h=255):
+def getHollowGridMask(tessel = 'odd', p=0.5, tessel_p = 0.5, hollow = True, s_l=0.01, s_h=0.05, v_l=0, v_h=255):
+    '''
+    Parameters
+    ----------
+    tessel : str, optional
+        The type of grid tessellation. 'even': even grids will be choosen. 'odd': odd grids will be choosen. 'random': toggles between even or odd grid for each image. The default is 'odd'.
+    p : float, optional
+        The probability that hollow grid mask is applied. The default is 0.5.
+    tessel_p : float, optional
+        The probability selecting 'odd' grid mask in 'random' mode. The default is 0.5.
+    hollow : boolean, optional
+        To activate or disable hollow or full grid mask. The default is True.
+    s_l : float, optional
+        The lower bound ratio of each grid square wrt the passed image. The default is 0.01.
+    s_h : float, optional
+        The upper bound ratio of each grid square wrt the passed image. The default is 0.05.
+    v_l : int, optional
+        Lower greyscale tone of the grid mask. The default is 0.
+    v_h : int, optional
+        Upper greyscale tone of the grid mask. The default is 255.
+
+    Returns
+    -------
+    3D numpy array
+        Image.
+
+    '''
     def HollowGridMask(image):
         def cartesian(arrays, out=None):
             '''
