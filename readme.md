@@ -54,14 +54,17 @@ Parameters
         Lower greyscale tone of the grid mask. The default is 0.
     v_h : int, optional
         Upper greyscale tone of the grid mask. The default is 255.
-```
+
     Returns
     -------
     3D numpy array
         Image.
+```
 
 #### Authors
 - [Leebond](https://github.com/leebond)
 - [lawchekun](https://github.com/lawchekun)
 - [dexterch](https://github.com/dexterch)
 - [Noonteo](noontwm@gmail.com)
+
+created and updated on 3 July 2020 GMT +8
